@@ -5,6 +5,7 @@ import { BsArrowRightShort } from "react-icons/bs"
 import { FaPlay } from "react-icons/fa"
 import { FaPause } from "react-icons/fa"
 
+
 const AudioPlayer = () => {
   // state
   const [isPlaying, setIsPlaying] = useState(false);
@@ -67,10 +68,9 @@ const AudioPlayer = () => {
     progressBar.current.value = Number(progressBar.current.value + 30);
     changeRange();
   }
-
   return (
     <div className={styles.audioPlayer}>
-      <audio ref={audioPlayer} src="https://cdn.simplecast.com/audio/cae8b0eb-d9a9-480d-a652-0defcbe047f4/episodes/af52a99b-88c0-4638-b120-d46e142d06d3/audio/500344fb-2e2b-48af-be86-af6ac341a6da/default_tc.mp3" preload="metadata"></audio>
+      <audio ref={audioPlayer} src="https://cdn.simplecast.com/audio/5915e4cd-1e89-4728-b0c9-c0a959ed01cd/episodes/d8f75feb-c932-4e47-b333-4492b7ba4713/audio/2f659f95-06e3-41b4-8ba5-1135a548c268/default_tc.mp3" preload="metadata"></audio>
       <button className={styles.forwardBackward} onClick={backThirty}><BsArrowLeftShort /> 30</button>
       <button onClick={togglePlayPause} className={styles.playPause}>
         {isPlaying ? <FaPause /> : <FaPlay className={styles.play} />}
